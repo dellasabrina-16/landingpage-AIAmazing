@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Amazing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <style>
+      body {
+        background-color: #f9edff;
+      }
+      .glow-text {
+        color: white !important;
+        text-shadow: 0 0 8px rgba(253, 253, 255, 0.8);
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 w-full z-50 transition-colors duration-500 backdrop-blur-sm px-6 py-4 flex justify-between items-center"
+    >
+      <div class="flex items-center gap-2">
+        <img src="img/logo.png" alt="Logo" class="w-8 h-8" />
+        <span class="text-lg font-semibold">AI Amazing</span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a
+          href="#features"
+          id="nav-features"
+          class="text-gray-800 hover:text-[#5E6EFF] transition"
+          >Features</a
+        >
+        <a
+          href="#reviews"
+          id="nav-reviews"
+          class="text-gray-800 hover:text-[#5E6EFF] transition"
+          >Reviews</a
+        >
+        <a
+          href="#start-trial"
+          id="nav-start"
+          class="text-gray-800 hover:text-[#5E6EFF] transition"
+          >Start Trial</a
+        >
+      </div>
+
+      <div
+        class="hidden items-center md:flex gap-4 text-sm font-medium text-gray-800"
+      >
+        <a href="#" class="hover:text-[#5E6EFF] transition">Sign in</a>
+        <a
+          id="get-started-btn"
+          href="#"
+          class="bg-[#5E6EFF] border border-transparent text-[#F7F7F7] hover:bg-transparent hover:text-[#5E6EFF] hover:border-[#5E6EFF] text-sm font-semibold py-2 px-4 rounded-lg transition"
+          >Get Started</a
+        >
+      </div>
+
+      <!-- Mobile Button -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg
+            id="icon-open"
+            class="w-6 h-6 block"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden hidden fixed flex flex-col gap-4 bg-white px-6 py-4 mt-20 shadow-md w-screen z-40"
+    >
+      <a
+        href="#features"
+        id="mobile-features"
+        class="mobile-link text-sm font-medium text-gray-800 hover:text-[#5E6EFF] transition"
+        >Features</a
+      >
+      <a
+        href="#reviews"
+        id="mobile-reviews"
+        class="mobile-link text-sm font-medium text-gray-800 hover:text-[#5E6EFF] transition"
+        >Reviews</a
+      >
+      <a
+        href="#start-trial"
+        id="mobile-start"
+        class="mobile-link text-sm font-medium text-gray-800 hover:text-[#5E6EFF] transition"
+        >Start Trial</a
+      >
+      <a
+        href="#"
+        class="mobile-link text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+        >Sign in</a
+      >
+      <a
+        href="#"
+        class="mobile-link bg-[#5E6EFF] text-[#F7F7F7] text-sm font-semibold py-2 px-4 rounded-lg transition text-center"
+        >Get Started</a
+      >
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id=""
+      class="pt-24 md:pt-10 px-8 md:px-24 flex flex-col md:flex-row items-center justify-between"
+    >
+      <!-- Left content -->
+      <div class="max-w-xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-black leading-snug">
+          Supercharge Your <br />
+          Bussines with <span class="text-[#5E6EFF]">AI Intelligence</span>
+        </h1>
+        <p class="mt-4 text-[#535353] text-base">
+          Transform your workflow with cutting-edge AI tools designed to boost
+          productivity, automate tasks, and unlock insights from your data.
+        </p>
+        <div class="mt-6 flex gap-4">
+          <button
+            id="startBtn"
+            class="bg-[#5E6EFF] border border-transparent hover:bg-[#F9EDFF] hover:text-[#3E4660] hover:border-[#D9D9D9] text-white text-sm font-semibold py-2.5 px-5 rounded-lg transition"
+          >
+            Start Free Trial →
+          </button>
+
+          <button
+            id="demoBtn"
+            class="bg-[#F9EDFF] border border-[#D9D9D9] text-[#3E4660] hover:bg-[#5E6EFF] hover:text-white text-sm font-semibold py-2.5 px-5 rounded-lg transition flex items-center gap-2"
+          >
+            <i class="bi bi-play-fill"></i> Watch Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2">
+        <img src="img/header.png" alt="Illustration" class="w-full" />
+      </div>
+    </section>
+
+    <!-- Fitur Section -->
+    <section id="features" class="px-6 md:px-16 py-20 bg-white text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+        Powerful Features Built for Modern Teams
+      </h2>
+      <p class="text-[#535353] max-w-2xl mx-auto mb-12">
+        Our AI platform combines advanced machine learning with intuitive design
+        to deliver results that matter.
+      </p>
+
+      <!-- Grid Fitur -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition"
+        >
+          <div
+            class="w-10 h-10 bg-[#e8e3fd] rounded-lg flex items-center justify-center mb-4"
+          >
+            <!-- bg-[#EFEFFEE0]/88 -->
+            <span class="text-[#6366F1] text-xl"
+              ><i class="bi bi-robot"></i
+            ></span>
+          </div>
+          <h3 class="font-semibold text-lg text-black mb-2">
+            Smart Automation
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Automate repetitive tasks and workflows with intelligent AI that
+            learns from your patterns and preferences.
+          </p>
+        </div>
+
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition"
+        >
+          <div
+            class="w-10 h-10 bg-[#e8e3fd] rounded-lg flex items-center justify-center mb-4"
+          >
+            <!-- bg-[#A066F1]/16 -->
+            <span class="text-[#A066F1] text-xl"
+              ><i class="bi bi-graph-up"></i
+            ></span>
+          </div>
+          <h3 class="font-semibold text-lg text-black mb-2">
+            Advanced Analytics
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Get deep insights from your data with AI-powered analytics and
+            predictive modeling capabilities.
+          </p>
+        </div>
+
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition"
+        >
+          <div
+            class="w-10 h-10 bg-[#e0f2fc] rounded-lg flex items-center justify-center mb-4"
+          >
+            <!-- bg-[#42C8ED2E]/18 -->
+            <span class="text-[#42C8ED] text-xl"
+              ><i class="bi bi-shield-fill"></i
+            ></span>
+          </div>
+          <h3 class="font-semibold text-lg text-black mb-2">
+            Enterprise Security
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Bank-level security with end-to-end encryption and compliance with
+            industry standards.
+          </p>
+        </div>
+
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition"
+        >
+          <div
+            class="w-10 h-10 bg-[#e8e3fd] rounded-lg flex items-center justify-center mb-4"
+          >
+            <!-- bg-[#EFEFFEE0]/88 -->
+            <span class="text-[#6366F1] text-xl"
+              ><i class="bi bi-robot"></i
+            ></span>
+          </div>
+          <h3 class="font-semibold text-lg text-black mb-2">
+            Smart Automation
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Automate repetitive tasks and workflows with intelligent AI that
+            learns from your patterns and preferences.
+          </p>
+        </div>
+
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition"
+        >
+          <div
+            class="w-10 h-10 bg-[#e8e3fd] rounded-lg flex items-center justify-center mb-4"
+          >
+            <!-- bg-[#A066F1]/16 -->
+            <span class="text-[#A066F1] text-xl"
+              ><i class="bi bi-graph-up"></i
+            ></span>
+          </div>
+          <h3 class="font-semibold text-lg text-black mb-2">
+            Advanced Analytics
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Get deep insights from your data with AI-powered analytics and
+            predictive modeling capabilities.
+          </p>
+        </div>
+
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition"
+        >
+          <div
+            class="w-10 h-10 bg-[#e0f2fc] rounded-lg flex items-center justify-center mb-4"
+          >
+            <!-- bg-[#42C8ED2E]/18 -->
+            <span class="text-[#42C8ED] text-xl"
+              ><i class="bi bi-shield-fill"></i
+            ></span>
+          </div>
+          <h3 class="font-semibold text-lg text-black mb-2">
+            Enterprise Security
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Bank-level security with end-to-end encryption and compliance with
+            industry standards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Testimoni -->
+    <section id="reviews" class="px-6 md:px-16 py-20 bg-[#f5f5f5] text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-black mb-2">
+        Trusted by Industry Leaders
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+        See what our customers are saying about their AI transformation journey
+      </p>
+
+      <!-- Grid Testimoni -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Testimoni 1 -->
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition bg-white"
+        >
+          <div class="flex mb-3 text-yellow-400 text-lg">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+            ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+            ><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="text-gray-800 mb-4">
+            "AI Pilot has revolutionized our workflow. We've seen a 40% increase
+            in productivity."
+          </p>
+          <div class="flex items-center gap-4">
+            <img
+              src="img/mingyu.png"
+              class="w-10 h-10 rounded-full"
+              alt="Ambalabu"
+            />
+            <div>
+              <p class="font-semibold text-black">Kim Mingyu</p>
+              <p class="text-sm text-gray-500">Data Director, InnovateCorp</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimoni 2 -->
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition bg-white"
+        >
+          <div class="flex mb-3 text-yellow-400 text-lg">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+            ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+            ><i class="bi bi-star"></i>
+          </div>
+          <p class="text-gray-800 mb-4">
+            "The analytics insights are incredible. We can now predict market
+            trends with 95% accuracy thanks to their AI models."
+          </p>
+          <div class="flex items-center gap-4">
+            <img
+              src="img/galuh.png"
+              class="w-10 h-10 rounded-full"
+              alt="Green Man"
+            />
+            <div>
+              <p class="font-semibold text-black">Galuh Saputra</p>
+              <p class="text-sm text-gray-500">CEO, Founder</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimoni 3 -->
+        <div
+          class="border rounded-xl p-6 text-left shadow-sm hover:shadow-md transition bg-white"
+        >
+          <div class="flex mb-3 text-yellow-400 text-lg">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+            ><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i
+            ><i class="bi bi-star"></i>
+          </div>
+          <p class="text-gray-800 mb-4">
+            "Implementation was seamless and the support team is outstanding.
+            Our ROI was positive within the first quarter."
+          </p>
+          <div class="flex items-center gap-4">
+            <img
+              src="img/jungkook.jpg"
+              class="w-10 h-10 rounded-full"
+              alt="Green Boy"
+            />
+            <div>
+              <p class="font-semibold text-black">Jeon Jungkook</p>
+              <p class="text-sm text-gray-500">CEO, TechFlow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      id="start-trial"
+      class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-32 bg-gradient-to-br from-[#A743FF] to-[#8B65FF]"
+    >
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Ready to Transform Your Business?
+      </h2>
+      <p class="text-base text-white/90 max-w-xl mb-8">
+        Join thousands of companies already using AI Pilot to automate
+        workflows, gain insights, and accelerate growth.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4">
+        <button
+          id="startBtn2"
+          class="bg-white text-[#6c5ce7] border border-transparent hover:bg-transparent hover:text-white hover:border-white font-semibold py-3 px-6 rounded-lg transition"
+        >
+          Start Free Trial
+        </button>
+
+        <button
+          id="demoBtn2"
+          class="bg-transparent text-white border border-white hover:bg-white hover:text-[#6c5ce7] hover:border-transparent font-semibold py-3 px-6 rounded-lg transition"
+        >
+          Schedule Demo
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#0c101d] text-gray-400 px-6 md:px-16 py-12">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8">
+              <img src="img/logo.png" alt="" />
+            </div>
+            <span class="text-white text-lg font-semibold">AI Amazing</span>
+          </div>
+          <p class="text-sm leading-relaxed">
+            Empowering businesses with intelligent AI <br />
+            solutions for the modern world.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-white text-base font-semibold mb-4">Link</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="#features" class="hover:text-white transition"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#reviews" class="hover:text-white transition">Reviews</a>
+            </li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="hidden lg:block"></div>
+      </div>
+
+      <div
+        class="mt-12 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500"
+      >
+        <p class="mb-4 md:mb-0">
+          © 2025 AI Pilot. Designed by Galuh Saputra (UI Designer) and
+          implemented by Della Sabrina (Front-End Developer). All rights
+          reserved.
+        </p>
+
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Section Highlight -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+      const navbar = document.getElementById("navbar");
+      const sections = [
+        { id: "features", linkId: "nav-features" },
+        { id: "reviews", linkId: "nav-reviews" },
+        { id: "start-trial", linkId: "nav-start" },
+      ];
+      const sectionColors = [
+        { id: "hero", bg: "bg-transparent" },
+        { id: "features", bg: "bg-transparent" },
+        { id: "reviews", bg: "bg-transparent" },
+        { id: "start-trial", bg: "bg-transparent" },
+      ];
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          const targetId = link.getAttribute("href").slice(1);
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            e.preventDefault();
+            mobileMenu.classList.add("hidden");
+
+            const offsetTop = targetSection.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth",
+            });
+          } else {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const allLinks = document.querySelectorAll("nav a");
+        const getStartedBtn = document.getElementById("get-started-btn");
+
+        let activeSectionId = null;
+
+        sections.forEach((section) => {
+          const sec = document.getElementById(section.id);
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            activeSectionId = section.id;
+          }
+        });
+
+        allLinks.forEach((lnk) => {
+          lnk.classList.remove(
+            "text-[#5E6EFF]",
+            "text-white",
+            "glow-text",
+            "font-semibold"
+          );
+          lnk.classList.add("text-gray-800");
+        });
+
+        if (activeSectionId === "start-trial") {
+          allLinks.forEach((lnk) => {
+            lnk.classList.remove("text-gray-800", "text-[#5E6EFF]");
+            lnk.classList.add("text-white");
+          });
+
+          const startLink = document.getElementById("nav-start");
+          startLink.classList.add("glow-text", "font-semibold");
+
+          if (getStartedBtn) {
+            getStartedBtn.className =
+              "bg-black text-white text-sm font-semibold py-2 px-4 rounded-lg transition";
+          }
+        } else {
+          if (getStartedBtn) {
+            getStartedBtn.className =
+              "bg-[#5E6EFF] text-[#F7F7F7] text-sm font-semibold py-2 px-4 rounded-lg transition";
+          }
+
+          const active = sections.find((s) => s.id === activeSectionId);
+          if (active) {
+            const activeLink = document.getElementById(active.linkId);
+            activeLink.classList.add("text-[#5E6EFF]");
+            activeLink.classList.remove("text-gray-800");
+          }
+        }
+      });
+    </script>
+
+    <!-- Mobile Section Highlight -->
+    <script>
+      const sectionsmobile = ["features", "reviews", "start-trial"];
+      const links = {
+        features: document.getElementById("mobile-features"),
+        reviews: document.getElementById("mobile-reviews"),
+        "start-trial": document.getElementById("mobile-start"),
+      };
+
+      function setActiveSection() {
+        let currentSection = "";
+        const scrollY = window.pageYOffset;
+
+        sectionsmobile.forEach((sectionId) => {
+          const section = document.getElementById(sectionId);
+          if (section && scrollY >= section.offsetTop - 80) {
+            currentSection = sectionId;
+          }
+        });
+
+        // Update classes
+        Object.keys(links).forEach((id) => {
+          if (id === currentSection) {
+            links[id].classList.add("text-[#5E6EFF]");
+            links[id].classList.remove("text-gray-800");
+          } else {
+            links[id].classList.remove("text-[#5E6EFF]");
+            links[id].classList.add("text-gray-800");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", setActiveSection);
+      window.addEventListener("load", setActiveSection);
+    </script>
+  </body>
+</html>
